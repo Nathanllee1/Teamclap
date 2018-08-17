@@ -10,6 +10,8 @@ from django.core.mail import send_mail
 from users.models import CustomUser
 from .forms import EmailForm
 
+from django.urls import reverse_lazy
+
 #class HomePageView(TemplateView):
 
     #template_name = 'sendEmail.html'
@@ -34,3 +36,4 @@ def emailSend(request):
         form = EmailForm
 
     return render(request, template_name, {'form': form})
+
