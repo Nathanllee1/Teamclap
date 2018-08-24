@@ -27,7 +27,7 @@ SECRET_KEY = '-)$*etmj^o@pppxhfd8ao@&s)z_c21#!j9v0@+pe^9p!6*jbu3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['django-env.m9kpfcmggf.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -137,8 +137,8 @@ LOGOUT_REDIRECT_URL = 'home'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'nathanllee'
-EMAIL_HOST_PASSWORD = 'Rose!234'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
