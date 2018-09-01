@@ -12,10 +12,6 @@ from .forms import EmailForm
 
 from django.urls import reverse_lazy
 
-#class HomePageView(TemplateView):
-
-    #template_name = 'sendEmail.html'
-
 
 def emailSend(request):
     template_name = 'sendEmail.html'
@@ -30,7 +26,7 @@ def emailSend(request):
             recipients = CustomUser.objects.all().values_list('email', flat=True)
             useremail = request.user.email
 
-            send_mail(subject, message, useremail, recipients)
+            send_mail(subject, message, useremail, recipients, fail_silently=False)
 
     else:
         form = EmailForm
