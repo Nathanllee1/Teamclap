@@ -2,17 +2,38 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
-<div class="jumbotron">
-    {% if user.is_authenticated %}
-    <h1 class="display-4">Welcome Back {{ user.username }}</h1>
 
+    {% if user.is_authenticated %}
+
+    {% for blog in object_list %}
+        <div class="card">
+            <img class="card-img-top" src={{ blog.picture }}>
+            <div class="card-header">
+                <span class="font-weight-bold">{{ blog.title }}</span>
+                <span class="text-muted"> by {{ blog.author }} | {{ blog.date }}</span>
+            </div>
+
+            <div class="card-body">
+                {{ blog.body }}
+            </div>
+
+            <div>
+                <div class="card-footer text-center text-muted">
+                    <a href="{% url 'article_edit' blog.pk %}">Edit</a> | <a href="{% url 'article_delete' blog.pk %}">Delete</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
     {% else %}
+<div class="jumbotron">
     <h1 class="display-4">Welcome to Teemsnep</h1>
 
     <p class="lead">Teemsnep is a messenger for Cross Country/Track teams</p>
     <hr class="my-4">
     <a href="{% url 'login' %}" class="btn btn-outline-secondary btn-lg">Log in</a>
     <a href="{% url 'signup' %}" class='btn btn-primary btn-lg'>Sign up</a>
+
+
 
     {% endif %}
 

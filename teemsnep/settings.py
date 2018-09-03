@@ -47,8 +47,10 @@ INSTALLED_APPS = [
 
     #custom
     'users',
-    'pages',
+
     'emailSend',
+    'roster',
+    'blog'
 ]
 
 MIDDLEWARE = [
