@@ -14,7 +14,13 @@
         </thead>
         <tbody>
             {% for athlete in object_list %}
-                <th scope="row">{{ user.username }}</th>
+            <tr>
+                <th scope="row">{{ athlete.grade }}</th>
+                <th scope="row">{{ athlete.username }}</th>
+                <th scope="row">{{ athlete.email }}</th>
+                <th scope="row">{{ athlete.phone }}</th>
+            </tr>
+
 
             {% endfor %}
         </tbody>
