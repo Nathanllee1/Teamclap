@@ -5,25 +5,49 @@
 
     {% if user.is_authenticated %}
 
-    {% for blog in object_list %}
-        <div class="card">
-            <img class="card-img-top" src={{ blog.picture }}>
-            <div class="card-header">
-                <span class="font-weight-bold">{{ blog.title }}</span>
-                <span class="text-muted"> by {{ blog.author }} | {{ blog.date }}</span>
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the Oakland Tech Cross Country Site!</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <strong>Placein</strong>
             </div>
 
-            <div class="card-body">
-                {{ blog.body }}
-            </div>
-
-            <div>
-                <div class="card-footer text-center text-muted">
-                    <a href="{% url 'article_edit' blog.pk %}">Edit</a> | <a href="{% url 'article_delete' blog.pk %}">Delete</a>
+            <div class="col-6">
+                {% for blog in object_list %}
+                <div class="card">
+                    <img class="card-img-top" src={{ blog.picture }}>
+                    <div class="card-header">
+                        <span class="font-weight-bold">{{ blog.title }}</span>
+                        <span class="text-muted"> by {{ blog.author }} | {{ blog.date }}</span>
+                        <div class="card-body">
+                            {{ blog.body }}
+                        </div>
+                        <div>
+                            <div class="card-footer text-center text-muted">
+                                <a href="{% url 'article_edit' blog.pk %}">Edit</a> | <a href="{% url 'article_delete' blog.pk %}">Delete</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
+
+            <div class="col">
+                <a href="https://instawidget.net/v/user/oakland_tech_xc" id="link-6878e2bb9b593f1a2fa1b31548169adf8f087452e9524e97169dc73d1d33fcd8">@oakland_tech_xc</a>
+
+                <script src="https://instawidget.net/js/instawidget.js?u=6878e2bb9b593f1a2fa1b31548169adf8f087452e9524e97169dc73d1d33fcd8&width=300px"></script>
+            </div>
         </div>
-    {% endfor %}
+
+
+
+        </div>
+    </div>
+
+
     {% else %}
 <div class="jumbotron">
     <h1 class="display-4">Welcome to Teemsnep</h1>
