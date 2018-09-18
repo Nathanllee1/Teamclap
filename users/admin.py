@@ -1,3 +1,4 @@
+'''
 from django.contrib import admin
 
 # Register your models here.
@@ -15,4 +16,6 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
+'''
+
 
