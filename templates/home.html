@@ -2,9 +2,6 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
-
-    {% if user.is_authenticated %}
-
     <div class="jumbotron">
         <h1 class="display-4">Welcome to the Oakland Tech Cross Country Site!</h1>
     </div>
@@ -15,7 +12,7 @@
                 <strong>Placein</strong>
             </div>
 
-            <div class="col-6">
+            <div class="main col-lg-6 col-md-8">
                 {% for blog in object_list %}
                 <div class="card">
                     <img class="card-img-top" src={{ blog.picture }}>
@@ -47,8 +44,8 @@
         </div>
     </div>
 
+<!--
 
-    {% else %}
 <div class="jumbotron">
     <h1 class="display-4">Welcome to Teemsnep</h1>
 
@@ -59,8 +56,8 @@
 
 
 
-    {% endif %}
 
+-->
 
 </div>
 {% endblock %}
