@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('emailSend.urls')),
     path('', include('roster.urls')),
     path('', include('blog.urls')),
+    path('', include('syncer.urls')),
 ]
