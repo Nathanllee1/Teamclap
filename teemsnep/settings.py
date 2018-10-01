@@ -50,7 +50,8 @@ INSTALLED_APPS = [
 
     'emailSend',
     'roster',
-    'blog'
+    'blog',
+    'syncer',
 ]
 
 MIDDLEWARE = [
