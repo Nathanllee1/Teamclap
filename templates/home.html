@@ -11,14 +11,14 @@
 
     <div class="container">
         <div class="row">
-            <div class="">
+            <div class="upcoming-events">
                 <strong>Placein</strong>
             </div>
 
-            <div class="cards">
+            <div class="main-cards">
                 {% for blog in object_list %}
                 <div class="card">
-                    <img class="card-img-top" src={{ blog.picture }}>
+                    <img class="card-img-top" src="{{ blog.picture }}">
                     <div class="card-header">
                         <span class="font-weight-bold">{{ blog.title }}</span>
                         <span class="text-muted"> by {{ blog.author }} | {{ blog.date }}</span>
@@ -35,7 +35,7 @@
             </div>
             {% endfor %}
 
-            <div class="socialxz">
+            <div class="social">
                 <a href="https://instawidget.net/v/user/oakland_tech_xc" id="link-6878e2bb9b593f1a2fa1b31548169adf8f087452e9524e97169dc73d1d33fcd8">@oakland_tech_xc</a>
 
                 <script src="https://instawidget.net/js/instawidget.js?u=6878e2bb9b593f1a2fa1b31548169adf8f087452e9524e97169dc73d1d33fcd8&width=300px"></script>

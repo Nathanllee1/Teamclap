@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 
 {% block title %}Send an email to your wonderful teammates and parents!{% endblock %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-    <div class="card">
 
-    </div>
     <h2>Send an email</h2>
 
     <form method="POST" class="email-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         <input class="btn btn-success" type="submit" value="Send">
 
     </form>
