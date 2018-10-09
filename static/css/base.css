@@ -1,8 +1,9 @@
-@media (min-width: 992px)
-.col-md-9 {
+
+.col-md-5 {
     width: 50%;
-    text-align: center;
+    justify-content: center;
     padding: 30px;
+    border-color: white;
 }
 
 
@@ -14,4 +15,5 @@
 
 .card {
     padding: 35px;
+    border-color: white;
 }
