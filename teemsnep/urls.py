@@ -24,4 +24,6 @@ urlpatterns = [
     path('', include('roster.urls')),
     path('', include('blog.urls')),
     path('', include('syncer.urls')),
+    path(r'^invitations/', include('invitations.urls', namespace='invitations')),
 ]
+
