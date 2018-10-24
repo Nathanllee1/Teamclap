@@ -163,3 +163,5 @@ EMAIL_USE_TLS = True
 django_heroku.settings(locals())
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
