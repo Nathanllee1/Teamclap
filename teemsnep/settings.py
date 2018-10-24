@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'roster',
     'blog',
     'syncer',
+    'TeamManagement',
 ]
 
 MIDDLEWARE = [

@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('roster.urls')),
     path('', include('blog.urls')),
     path('', include('syncer.urls')),
+    path('', include('TeamManagement.urls')),
     path('invitations/', include('invitations.urls', namespace='invitations')),
     path(r'^tinymce/', include('tinymce.urls')),
 ]
