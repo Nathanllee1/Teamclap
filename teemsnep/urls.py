@@ -26,5 +26,6 @@ urlpatterns = [
     path('', include('syncer.urls')),
     path('invitations/', include('invitations.urls', namespace='invitations')),
     path(r'^tinymce/', include('tinymce.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 

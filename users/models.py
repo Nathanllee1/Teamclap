@@ -9,3 +9,6 @@ class CustomUser(AbstractUser):
     phone = models.PositiveIntegerField(000-000-0000)
     status = models.CharField(max_length=20, default='Athlete')
     status = models.CharField(max_length=10,  default='')
+
+    def __str__(self):
+        return self.email

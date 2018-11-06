@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
-#from django.urls import reverse
+from django.urls import reverse
+from tinymce.models import HTMLField
 # Create your models here.
 
 
@@ -12,7 +13,7 @@ class Post(models.Model):
     )
     date = models.DateTimeField(auto_now_add=True)
 
-    body = models.TextField()
+    body = HTMLField()
 
     picture = models.ImageField(upload_to='pic_folder/', default='pic_folder/None/no-img.jpg')
 
