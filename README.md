@@ -7,3 +7,6 @@ $pip install requirements.txt
 
 
 ![Alt text](teemsnep.png)
+![Alt text](home.png)
+![Alt text](roster.png)
+![Alt text](post.png)
